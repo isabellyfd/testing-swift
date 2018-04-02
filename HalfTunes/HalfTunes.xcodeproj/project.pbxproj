@@ -17,10 +17,19 @@
 		D9EF8FF11B53FDCB00EFC4B6 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF8FED1B53FDCB00EFC4B6 /* TrackCell.swift */; };
 		D9EF8FF21B53FDCB00EFC4B6 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF8FEE1B53FDCB00EFC4B6 /* Track.swift */; };
 		EA735C9A2072D8CE0064C814 /* HalfTunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA735C992072D8CE0064C814 /* HalfTunesTests.swift */; };
+		EA735CA82072E0440064C814 /* HalfTunesFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA735CA72072E0440064C814 /* HalfTunesFakeTests.swift */; };
+		EA735CB02072E2760064C814 /* abbaData.json in Resources */ = {isa = PBXBuildFile; fileRef = EA735CAF2072E2760064C814 /* abbaData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		EA735C9C2072D8CE0064C814 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9EF8FB91B53FD2100EFC4B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9EF8FC01B53FD2100EFC4B6;
+			remoteInfo = HalfTunes;
+		};
+		EA735CAA2072E0440064C814 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D9EF8FB91B53FD2100EFC4B6 /* Project object */;
 			proxyType = 1;
@@ -44,6 +53,10 @@
 		EA735C972072D8CE0064C814 /* HalfTunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HalfTunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA735C992072D8CE0064C814 /* HalfTunesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfTunesTests.swift; sourceTree = "<group>"; };
 		EA735C9B2072D8CE0064C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA735CA52072E0440064C814 /* HalfTunesFakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HalfTunesFakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA735CA72072E0440064C814 /* HalfTunesFakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfTunesFakeTests.swift; sourceTree = "<group>"; };
+		EA735CA92072E0440064C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA735CAF2072E2760064C814 /* abbaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = abbaData.json; path = ../../../../Downloads/abbaData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EA735C942072D8CE0064C814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA735CA22072E0440064C814 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,6 +106,7 @@
 			children = (
 				D9EF8FC31B53FD2100EFC4B6 /* HalfTunes */,
 				EA735C982072D8CE0064C814 /* HalfTunesTests */,
+				EA735CA62072E0440064C814 /* HalfTunesFakeTests */,
 				D9EF8FC21B53FD2100EFC4B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 			children = (
 				D9EF8FC11B53FD2100EFC4B6 /* HalfTunes.app */,
 				EA735C972072D8CE0064C814 /* HalfTunesTests.xctest */,
+				EA735CA52072E0440064C814 /* HalfTunesFakeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +152,16 @@
 				EA735C9B2072D8CE0064C814 /* Info.plist */,
 			);
 			path = HalfTunesTests;
+			sourceTree = "<group>";
+		};
+		EA735CA62072E0440064C814 /* HalfTunesFakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA735CAF2072E2760064C814 /* abbaData.json */,
+				EA735CA72072E0440064C814 /* HalfTunesFakeTests.swift */,
+				EA735CA92072E0440064C814 /* Info.plist */,
+			);
+			path = HalfTunesFakeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +202,24 @@
 			productReference = EA735C972072D8CE0064C814 /* HalfTunesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EA735CA42072E0440064C814 /* HalfTunesFakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA735CAC2072E0440064C814 /* Build configuration list for PBXNativeTarget "HalfTunesFakeTests" */;
+			buildPhases = (
+				EA735CA12072E0440064C814 /* Sources */,
+				EA735CA22072E0440064C814 /* Frameworks */,
+				EA735CA32072E0440064C814 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA735CAB2072E0440064C814 /* PBXTargetDependency */,
+			);
+			name = HalfTunesFakeTests;
+			productName = HalfTunesFakeTests;
+			productReference = EA735CA52072E0440064C814 /* HalfTunesFakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +235,12 @@
 						LastSwiftMigration = 0810;
 					};
 					EA735C962072D8CE0064C814 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 3NUJTPYY6R;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D9EF8FC01B53FD2100EFC4B6;
+					};
+					EA735CA42072E0440064C814 = {
 						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 3NUJTPYY6R;
 						ProvisioningStyle = Automatic;
@@ -207,6 +263,7 @@
 			targets = (
 				D9EF8FC01B53FD2100EFC4B6 /* HalfTunes */,
 				EA735C962072D8CE0064C814 /* HalfTunesTests */,
+				EA735CA42072E0440064C814 /* HalfTunesFakeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +283,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA735CA32072E0440064C814 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA735CB02072E2760064C814 /* abbaData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +318,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA735CA12072E0440064C814 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA735CA82072E0440064C814 /* HalfTunesFakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,6 +333,11 @@
 			isa = PBXTargetDependency;
 			target = D9EF8FC01B53FD2100EFC4B6 /* HalfTunes */;
 			targetProxy = EA735C9C2072D8CE0064C814 /* PBXContainerItemProxy */;
+		};
+		EA735CAB2072E0440064C814 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9EF8FC01B53FD2100EFC4B6 /* HalfTunes */;
+			targetProxy = EA735CAA2072E0440064C814 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -458,6 +536,68 @@
 			};
 			name = Release;
 		};
+		EA735CAD2072E0440064C814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3NUJTPYY6R;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = HalfTunesFakeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunesFakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HalfTunes.app/HalfTunes";
+			};
+			name = Debug;
+		};
+		EA735CAE2072E0440064C814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NUJTPYY6R;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = HalfTunesFakeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunesFakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HalfTunes.app/HalfTunes";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +624,15 @@
 			buildConfigurations = (
 				EA735C9E2072D8CE0064C814 /* Debug */,
 				EA735C9F2072D8CE0064C814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA735CAC2072E0440064C814 /* Build configuration list for PBXNativeTarget "HalfTunesFakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA735CAD2072E0440064C814 /* Debug */,
+				EA735CAE2072E0440064C814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
