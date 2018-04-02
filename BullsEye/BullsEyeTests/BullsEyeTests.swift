@@ -29,7 +29,15 @@ class BullsEyeTests: XCTestCase {
         
         _ = gameUnderTest.check(guess: guess)
         
-        XCTAssertEqual(gameUnderTest.scoreRound, 95, "Score computed form guess is wrong")
+        XCTAssertEqual(gameUnderTest.scoreRound, 95, "Score computed from guess is wrong")
+    }
+    
+    func testScoreIsComputedWhenGuessLessThanTarget() {
+        let guess = gameUnderTest.targetValue - 5
+        
+        _ = gameUnderTest.check(guess: guess)
+        
+        XCTAssertEqual(gameUnderTest.scoreRound, 95, "Score computed from guess is wrong")
     }
     
 }
