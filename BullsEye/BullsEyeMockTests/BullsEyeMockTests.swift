@@ -12,23 +12,42 @@ import XCTest
 class MockUserDefaults: UserDefaults {
     var gameStyleChanged = 0
     
-    override func setValue(_ value: Any?, forKey key: String) {
+    override func set(_ value: Int, forKey key: String) {
         if key == "gameStyle" {
             gameStyleChanged += 1
         }
     }
 }
 
+
 class BullsEyeMockTests: XCTestCase {
+    
+    var controllerUnderTest : ViewController!
+    var mockUserDefaults : MockUserDefaults!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! ViewController
+        
+        mockUserDefaults = MockUserDefaults(suiteName: "testing")
+        controllerUnderTest.defaults = mockUserDefaults
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockUserDefaults = nil
+        controllerUnderTest = nil
         super.tearDown()
+    }
+    
+    func testGameStyleCanBeChanged() {
+        let segmentedControl = UISegmentedControl()
+        
+        XCTAssertEqual(mockUserDefaults.gameStyleChanged, 0, "gameStyleChanged should be 0 before sendActions")
+        segmentedControl.addTarget(controllerUnderTest, action: #selector(ViewController.chooseGameStyle(_:)), for: .valueChanged)
+        segmentedControl.sendActions(for: .valueChanged)
+        
+        XCTAssertEqual(mockUserDefaults.gameStyleChanged, 1, "gameStyle default wasn't changed")
     }
     
     
