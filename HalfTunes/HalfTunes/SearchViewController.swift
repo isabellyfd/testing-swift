@@ -442,13 +442,13 @@ extension SearchViewController: URLSessionDownloadDelegate {
 extension SearchViewController: URLSessionDelegate {
   // simply grabs the stored completion handler from the app delegate and invokes it on the main thread
   func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-      if let completionHandler = appDelegate.backgroundSessionCompletionHandler {
-        appDelegate.backgroundSessionCompletionHandler = nil
-        DispatchQueue.main.async {
-          completionHandler()
+    DispatchQueue.main.async {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            if let completionHandler = appDelegate.backgroundSessionCompletionHandler {
+                appDelegate.backgroundSessionCompletionHandler = nil
+                completionHandler()
+            }
         }
-      }
     }
   }
 }

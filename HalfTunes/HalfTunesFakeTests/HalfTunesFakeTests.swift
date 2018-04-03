@@ -15,6 +15,7 @@ class HalfTunesFakeTests: XCTestCase {
     override func setUp() {
         super.setUp()
         controllerUnderTest = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! SearchViewController!
+        controllerUnderTest.loadViewIfNeeded()
         
         let testBundle = Bundle(for: type(of: self))
         let path = testBundle.path(forResource: "abbaData", ofType: "json")
@@ -54,5 +55,12 @@ class HalfTunesFakeTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
         
         XCTAssertEqual(controllerUnderTest?.searchResults.count, 3, "Didn't parse 3 items from fake response")
+    }
+    
+    func testStartDownloadPerformace() {
+        let track = Track(name: "Waterloo", artist: "ABBA", previewUrl: "http://a821.phobos.apple.com/us/r30/Music/d7/ba/ce/mzm.vsyjlsff.aac.p.m4a")
+        measure {
+            self.controllerUnderTest?.startDownload(track)
+        }
     }
 }
